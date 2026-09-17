@@ -29,10 +29,10 @@ uvicorn app.main:app --reload
 ```
 Backend runs at http://localhost:8000 (interactive docs at `/docs`).
 
-Demo accounts created by `seed.py`:
-- Admin: `admin@civicmart.gov` / `admin123`
-- Vendor: `vendor@civicmart.gov` / `vendor123`
-- Citizen: `citizen@civicmart.gov` / `citizen123`
+Demo accounts:
+- Admin: `admin@civicmart.gov` /
+- Vendor: `vendor@civicmart.gov` /
+- Citizen: `citizen@civicmart.gov` /
 
 ### 2. Frontend
 ```bash
