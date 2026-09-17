@@ -17,10 +17,10 @@ export default function Navbar() {
       <Link to="/" className="brand">🏛️ CivicMart</Link>
       <div className="links">
         <Link to="/notices">Notices</Link>
-        <Link to="/products">Marketplace</Link>
 
         {user && user.role === "citizen" && (
           <>
+            <Link to="/products">Marketplace</Link>
             <Link to="/complaints">Complaints</Link>
             <Link to="/certificates">Certificates</Link>
             <Link to="/orders">My Orders</Link>
