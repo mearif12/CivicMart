@@ -1,0 +1,17 @@
+# Render "Blueprint" -- lets you deploy the backend with one click via
+# https://dashboard.render.com/blueprints  (New -> Blueprint -> point at
+# this repo). You can also just create the Web Service manually using
+# the same settings shown here (see the Documentation .docx for the
+# manual click-by-click steps).
+services:
+  - type: web
+    name: civicmart-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false   # set this yourself if you connect a free Postgres DB
